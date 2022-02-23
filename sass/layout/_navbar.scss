@@ -1,0 +1,140 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+@use "../layout/layout" as *;
+
+nav {
+  ul {
+    list-style: none;
+  }
+
+  img {
+    cursor: pointer;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.3rem 0 2.7rem;
+
+  > div {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 1.6rem;
+    align-items: center;
+  }
+
+  ul {
+    display: none;
+  }
+
+  li {
+    position: relative;
+  }
+
+  li:hover {
+    color: $color-very-dark-blue;
+    transition: all 0.2s;
+  }
+
+  li:hover::after {
+    background: $color-orange;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 5.7rem;
+  }
+
+  &__logo {
+    height: 1.9rem;
+    padding-bottom: 0.2rem;
+  }
+
+  #hamburger {
+    height: 15px;
+  }
+
+  #cart {
+    height: 19px;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    border: 1.5px solid transparent;
+    box-sizing: content-box;
+    height: 25px;
+    width: 25px;
+  }
+
+  &__avatar:hover {
+    border: 1.5px solid $color-orange;
+    transition: all 0.7s;
+  }
+
+  @include breakpoint("748px") {
+    border-bottom: solid 2px $color-light-grayish-blue;
+
+    > div {
+      gap: 3rem;
+    }
+
+    &__avatar {
+      width: 45px;
+      height: 45px;
+    }
+
+    &__logo {
+      height: 1.7rem;
+    }
+
+    #hamburger {
+      display: none;
+    }
+
+    #cart {
+      height: 17px;
+    }
+
+    ul {
+      display: inline-flex;
+      flex-direction: row;
+      gap: 2.5rem;
+    }
+  }
+}
+
+.navbar__mobile {
+  align-items: flex-start;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 5.6rem;
+  height: 100vh;
+  left: 0;
+  padding: 2.4rem 12rem 2.4rem 2.4rem;
+  position: fixed;
+  top: 0;
+  transform: translateX(0);
+  transition: transform 0.3s;
+  z-index: 10;
+
+  &.hidden {
+    transform: translateX(-500px);
+    transition: all 0.3s;
+  }
+
+  ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    color: $color-very-dark-blue;
+    gap: 2rem;
+  }
+
+  img {
+    width: 1.5rem;
+  }
+}

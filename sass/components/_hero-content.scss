@@ -1,0 +1,147 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "sass:color";
+
+.hero {
+  &__content {
+    header {
+      color: $color-orange;
+      font-size: 1.35rem;
+      font-weight: 500;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      color: $color-very-dark-blue;
+      font-size: 2.9rem;
+      margin: 1.2rem 0 0;
+    }
+
+    h1 ~ p {
+      margin-top: 2rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.5;
+    }
+
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2.5rem;
+      gap: 1.7rem;
+    }
+
+    .btn__add {
+      @include btn;
+      align-items: center;
+      box-shadow: 0 5px 20px -5px $color-orange;
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      padding: 1.525rem;
+      transition: all 0.3s;
+
+      img {
+        width: 15px;
+        filter: invert(150%) sepia(150%) saturate(0%) hue-rotate(288deg)
+          brightness(150%) contrast(150%);
+      }
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+      background-color: $color-pale-orange;
+      border-radius: $border-radius;
+      color: $color-orange;
+      font-weight: 500;
+      font-size: 1.5rem;
+      letter-spacing: 0;
+      margin-left: 2rem;
+      padding: 0.3rem 0.6rem;
+    }
+
+    &--large {
+      align-items: center;
+      color: $color-very-dark-blue;
+      display: flex;
+      font-size: 2.7rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    &--small {
+      color: $color-grayish-blue;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin: 0;
+      text-decoration: line-through;
+    }
+  }
+
+  &__quantity {
+    align-items: center;
+    background-color: $color-light-grayish-blue;
+    border-radius: $border-radius;
+    color: $color-very-dark-blue;
+    display: inline-flex;
+    font-weight: 700;
+    justify-content: space-between;
+    padding: 0.7rem 1rem;
+    width: 100%;
+
+    .increase,
+    .decrease {
+      color: $color-orange;
+      cursor: pointer;
+      font-size: 2.4rem;
+      padding-bottom: 0.5rem;
+      transition: color 0.2s;
+    }
+
+    .increase:hover,
+    .decrease:hover {
+      color: lighten($color-orange, 10);
+    }
+  }
+
+  @include breakpoint("768px") {
+    &__content {
+      h1 {
+        font-size: 3.5rem;
+      }
+
+      h1 ~ p {
+        margin-bottom: 2rem;
+      }
+
+      .btn-container {
+        flex-direction: row;
+        margin-top: 3rem;
+
+        button,
+        div {
+          width: auto;
+        }
+
+        button {
+          flex-grow: 3;
+        }
+
+        div {
+          flex-grow: 2;
+        }
+      }
+    }
+
+    &__price {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.1rem;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@use "../utilities/variables" as *;
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  span {
+    display: inline-block;
+    width: 1.6rem;
+    height: 0.3rem;
+    background-color: $color-dark-grayish-blue;
+  }
+}

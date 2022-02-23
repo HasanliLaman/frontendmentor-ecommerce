@@ -1,0 +1,20 @@
+@use "../utilities/variables" as *;
+
+.credits {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 2.4rem 4rem;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    transition: all 0.3s;
+  }
+
+  a:hover {
+    color: $color-orange;
+  }
+}

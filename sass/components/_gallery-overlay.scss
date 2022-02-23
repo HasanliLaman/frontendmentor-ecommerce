@@ -1,0 +1,49 @@
+.gallery__overlay-container {
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -47%);
+
+  .gallery {
+    &__overlay > img {
+      width: 400px;
+    }
+
+    &__thumbnails {
+      justify-content: space-around;
+      gap: 0;
+      img {
+        width: 75px;
+      }
+    }
+
+    &__icon:nth-of-type(2) {
+      left: 0;
+      top: 35%;
+      transform: translateX(-50%);
+    }
+
+    &__icon:last-of-type {
+      right: 0;
+      top: 35%;
+      transform: translateX(50%);
+    }
+
+    &__close {
+      position: fixed;
+      top: -3rem;
+      right: 0;
+      width: 15px;
+      cursor: pointer;
+      filter: brightness(0) saturate(100%) invert(89%) sepia(71%)
+        saturate(4317%) hue-rotate(182deg) brightness(129%) contrast(100%);
+      transition: all 0.15s;
+
+      &:hover {
+        filter: brightness(0) saturate(100%) invert(60%) sepia(17%)
+          saturate(7490%) hue-rotate(347deg) brightness(101%) contrast(101%);
+      }
+    }
+  }
+}

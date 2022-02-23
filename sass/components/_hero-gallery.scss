@@ -1,0 +1,87 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+
+.gallery {
+  &__desktop {
+    display: none;
+  }
+
+  &__mobile {
+    position: relative;
+  }
+
+  &__img img {
+    object-fit: cover;
+    width: 100%;
+    height: 33vh;
+    transition: all 0.5s;
+  }
+
+  &__img .hidden {
+    display: none;
+    visibility: initial;
+  }
+
+  &__icon {
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 1rem 1.3rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  &__icon:first-of-type {
+    left: 3%;
+  }
+
+  &__icon:last-of-type {
+    right: 3%;
+  }
+
+  @include breakpoint("768px") {
+    &__mobile {
+      display: none;
+    }
+
+    &__desktop,
+    &__overlay {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      img {
+        border-radius: $border-radius;
+        cursor: pointer;
+      }
+    }
+
+    &__active {
+      width: 100%;
+    }
+
+    &__thumbnails {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    &__thumbnail {
+      transition: all 0.3s;
+      width: 90px;
+      background-color: $color-orange;
+
+      &--active {
+        filter: opacity(0.6);
+        transition: all 0.3s;
+        border: 2px solid hsl(26, 94%, 38%);
+      }
+    }
+
+    &__thumbnail:hover {
+      filter: opacity(0.8);
+    }
+  }
+}

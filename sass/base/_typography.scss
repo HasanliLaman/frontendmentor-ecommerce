@@ -1,0 +1,19 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Kumbh Sans", sans-serif;
+  color: $color-dark-grayish-blue;
+}
+
+@include breakpoint("748px") {
+  body {
+    font-size: 1.4rem;
+  }
+}

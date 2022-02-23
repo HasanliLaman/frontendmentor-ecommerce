@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer."
+    />
+    <meta property="og:title" content="Fall Limited Edition Sneakers" />
+    <meta
+      property="og:description"
+      content="These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Sneakers | Fall Limited Edition</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <nav class="block">
+      <div class="container navbar">
+        <div>
+          <img id="hamburger" src="images/icon-menu.svg" alt="Menu" />
+          <a href="#"
+            ><img class="navbar__logo" src="images/logo.svg" alt="Logo"
+          /></a>
+          <ul>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <img id="cart" src="images/icon-cart.svg" alt="Cart" />
+          <img
+            class="navbar__avatar"
+            src="images/image-avatar.png"
+            alt="User Avatar"
+          />
+        </div>
+      </div>
+      <div class="navbar__mobile hidden">
+        <img id="nav-close" src="images/icon-close.svg" />
+        <ul>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="hero container">
+      <section class="cart hidden">
+        <h2>Cart</h2>
+        <div class="cart__line"></div>
+        <div class="cart__content">
+          <div class="cart__empty">
+            <p>Your cart is empty.</p>
+          </div>
+          <!-- <div class="cart__product">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt="Sneaker image"
+            />
+            <div>
+              <p>Autumn limited edition sneakers</p>
+              <p>
+                $125.00 x <span>1</span>
+                <span class="cart__amount">$125.00</span>
+              </p>
+            </div>
+            <img src="images/icon-delete.svg" class="btn__delete" alt="Delete" />
+          </div>
+          <button class="cart__checkout">Checkout</button> -->
+        </div>
+      </section>
+
+      <div class="hero__gallery">
+        <div class="gallery__mobile">
+          <img
+            src="images/icon-previous.svg"
+            class="gallery__icon"
+            alt="Previous"
+          />
+          <div class="gallery__img">
+            <img
+              src="images/image-product-1.jpg"
+              class="hero-img"
+              alt="Shoes image"
+            />
+            <img
+              src="images/image-product-2.jpg"
+              class="hidden hero-img"
+              alt="Shoes image"
+            />
+            <img
+              src="images/image-product-3.jpg"
+              class="hidden hero-img"
+              alt="Shoes image"
+            />
+            <img
+              src="images/image-product-4.jpg"
+              class="hidden hero-img"
+              alt="Shoes image"
+            />
+          </div>
+          <img src="images/icon-next.svg" class="gallery__icon" alt="Next" />
+        </div>
+
+        <div class="gallery__desktop">
+          <img
+            src="images/image-product-1.jpg"
+            class="gallery__active"
+            alt="Sneaker image"
+          />
+          <div class="gallery__thumbnails">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              class="gallery__thumbnail gallery__thumbnail--active"
+              data-num="1"
+            />
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              class="gallery__thumbnail"
+              data-num="2"
+            />
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+              class="gallery__thumbnail"
+              data-num="3"
+            />
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              class="gallery__thumbnail"
+              data-num="4"
+            />
+          </div>
+        </div>
+
+        <div class="gallery__overlay-container hidden">
+          <img src="images/icon-close.svg" class="gallery__close" alt="Close" />
+          <img
+            src="images/icon-previous.svg"
+            id="prev-desktop"
+            class="gallery__icon"
+            alt="Previous"
+          />
+          <div class="gallery__overlay">
+            <img
+              src="images/image-product-1.jpg"
+              class="gallery__active"
+              alt="Sneaker image"
+            />
+            <div class="gallery__thumbnails">
+              <img
+                src="images/image-product-1-thumbnail.jpg"
+                class="gallery__thumbnail gallery__thumbnail--active"
+                data-num="1"
+              />
+              <img
+                src="images/image-product-2-thumbnail.jpg"
+                class="gallery__thumbnail"
+                data-num="2"
+              />
+              <img
+                src="images/image-product-3-thumbnail.jpg"
+                class="gallery__thumbnail"
+                data-num="3"
+              />
+              <img
+                src="images/image-product-4-thumbnail.jpg"
+                class="gallery__thumbnail"
+                data-num="4"
+              />
+            </div>
+          </div>
+          <img
+            src="images/icon-next.svg"
+            id="next-desktop"
+            class="gallery__icon"
+            alt="Next"
+          />
+        </div>
+      </div>
+
+      <div class="hero__content">
+        <header>Sneaker Company</header>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <div class="hero__price">
+          <p class="hero__price--large">$125.00 <span>50%</span></p>
+          <p class="hero__price--small">$250.00</p>
+        </div>
+        <div class="btn-container">
+          <div class="hero__quantity">
+            <span class="decrease">-</span>
+            <span class="quantity">1</span>
+            <span class="increase">+</span>
+          </div>
+          <button class="btn__add">
+            <img src="images/icon-cart.svg" alt="" /><span>Add to cart</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="credits">
+      <p>
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          href="https://github.com/HasanliLaman"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Laman Hasanli</a
+        >.
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

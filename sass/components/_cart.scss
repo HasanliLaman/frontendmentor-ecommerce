@@ -1,0 +1,99 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.cart {
+  background-color: #fff;
+  border-radius: $border-radius;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  left: -1%;
+  margin: 2rem;
+  padding: 0 2.5rem;
+  position: absolute;
+  right: -1%;
+  top: -1%;
+  z-index: 2;
+
+  h2 {
+    color: $color-very-dark-blue;
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 2.4rem 0;
+  }
+
+  &__line {
+    height: 1.3px;
+    background-color: $color-grayish-blue;
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 0.5;
+  }
+
+  &__empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    padding: 7.85rem 9.9rem;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__product {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+
+    & > div {
+      margin-left: 1.5rem;
+      flex-grow: 1;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    & > div * {
+      text-overflow: ellipsis;
+    }
+
+    img:first-of-type {
+      width: 55px;
+      border-radius: $border-radius;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    p:first-of-type {
+      margin-bottom: 0.8rem;
+      text-transform: capitalize;
+    }
+
+    img:last-of-type {
+      width: 13px;
+      cursor: pointer;
+      margin-left: 2rem;
+    }
+  }
+
+  &__amount {
+    font-weight: 700;
+    color: $color-very-dark-blue;
+    margin-left: 0.5rem;
+  }
+
+  &__checkout {
+    @include btn;
+    padding: 1.6rem;
+    margin-bottom: 3rem;
+  }
+
+  @include breakpoint("768px") {
+    display: inline-block;
+    top: -18%;
+    left: auto;
+  }
+}

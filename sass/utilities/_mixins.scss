@@ -1,0 +1,23 @@
+@use "../utilities/variables" as *;
+
+@mixin breakpoint($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin btn {
+  width: 100%;
+  background-color: $color-orange;
+  color: white;
+  border-radius: 6px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 600;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: lighten($color-orange, 8);
+  }
+}
