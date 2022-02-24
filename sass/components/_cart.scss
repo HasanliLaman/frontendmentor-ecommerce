@@ -35,7 +35,7 @@
     justify-content: center;
     align-items: center;
     font-weight: 600;
-    padding: 7.85rem 9.9rem;
+    padding: 7.85rem 0;
 
     p {
       margin: 0;
@@ -95,5 +95,9 @@
     display: inline-block;
     top: -18%;
     left: auto;
+
+    &__empty {
+      padding: 7.85rem 9.9rem;
+    }
   }
 }

@@ -630,7 +630,7 @@ body {
   justify-content: center;
   align-items: center;
   font-weight: 600;
-  padding: 7.85rem 9.9rem;
+  padding: 7.85rem 0;
 }
 .cart__empty p {
   margin: 0;
@@ -691,6 +691,9 @@ body {
     display: inline-block;
     top: -18%;
     left: auto;
+  }
+  .cart__empty {
+    padding: 7.85rem 9.9rem;
   }
 }
 
