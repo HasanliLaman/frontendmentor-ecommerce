@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/HasanliLaman/frontendmentor-ecommerce)
-- Live Site URL: [Add live site URL here](https://hasanlilaman.github.io/frontendmentor-ecommerce/)
+- Solution URL: [https://github.com/HasanliLaman/frontendmentor-ecommerce](https://github.com/HasanliLaman/frontendmentor-ecommerce)
+- Live Site URL: [https://hasanlilaman.github.io/frontendmentor-ecommerce/](https://hasanlilaman.github.io/frontendmentor-ecommerce/)
 
 ## My process
 
@@ -47,5 +47,5 @@ Users should be able to:
 
 ## Author
 
-- Github - [Add your name here](https://github.com/HasanliLaman)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/HasanliLaman)
+- Github - [Laman Hasanli](https://github.com/HasanliLaman)
+- Frontend Mentor - [@HasanliLaman](https://www.frontendmentor.io/profile/HasanliLaman)
